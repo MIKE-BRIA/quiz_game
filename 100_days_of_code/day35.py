@@ -1,32 +1,51 @@
 import os, time
-toDoList = []
 
-def printList():
-  print()
-  for items in toDoList:
-    print(items)
-  print()
+def colorchange(color):
+    if color=='red':
+        return('\033[31m')
+    elif color=='white':
+        return('\033[0m')
+    elif color=='blue':
+        return('\033[34m')
+    elif color=='yellow':
+        return('\033[33m')
+    elif color=='green':
+        return('\033[32m')
+    elif color=='purple':
+        return('\033[35m')
+      
+title=f"{colorchange('purple')}TODO LIST MANAGER"
+print(f"\t{title}")
+print()
 
+def pring():
+  print()
+  for i in list:
+    print(i)
+  print()
+    
+list=[]
 while True:
-  menu = input("ToDo List Manager\nDo you want to view, add, edit, remove or delete the todo list?\n")
-  if menu=="view":
-    printList()
-  elif menu=="add":
-    item = input("What do you want to add?\n").title()
-    toDoList.append(item)
-  elif menu=="remove":
-    item = input("What do you want to remove?\n").title()
-    check = input("Are you sure you want to remove this?\n")
-    if check[0]=="y":
-      if item in toDoList:
-        toDoList.remove(item)
-  elif menu=="edit":
-    item = input("What do you want to edit?\n").title()
-    new = input("What do you want to change it to?\n").title()
-    for i in range(0,len(toDoList)):
-      if toDoList[i]==item:
-        toDoList[i]=new
-  elif menu=="delete":
-    toDoList = []
+  fun=input("Do you want to view, add, remove, delete all the todo list\n")
+  fun=fun.lower()
+  if fun == "view":
+    pring()
+  elif fun == "add":
+    item=input("What do you want to do: ")
+    list.append(item)
+    pring()
+  elif fun=="remove":
+    item=input("Which task do you want to remove: ")
+    boom=input("Are you sure you want to\n remove this?\n")
+    if boom=="yes":
+      if item in list:
+        list.remove(item)
+      else:
+        print(f"{item} is not in the list")
+      
+    pring()
+  elif fun =='delete all':
+    list=[]
+
   time.sleep(1)
   os.system('clear')
