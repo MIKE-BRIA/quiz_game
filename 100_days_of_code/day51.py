@@ -1,8 +1,9 @@
 import time, os
 
 list=[]
-f = open("to.do", "r")
-todo = eval(f.read())
+
+f = open("calendar.txt","r") 
+myEvents = eval(f.read())
 f.close()
 
 def pring():
@@ -87,8 +88,9 @@ while True:
     edit()
   else:
     remove()
+
+  f = open("calender.txt", "w")
+  f.write(str(list))
+  f.close()
   time.sleep(1)
   os.system("clear")
-  f = open("to.do", "w")
-  f.write(str(todo))
-  f.close(
