@@ -4,7 +4,10 @@ console.log('hello everyone');
 
 alert('i am a tech enterprenuer');
 
-//variables
+
+
+
+//VARIABLES
 
 let nameofmine = 'Michael';
 let age = 32;
@@ -16,7 +19,8 @@ let job = {title: 'Enterprenuer', place: 'Nairobi'};
 alert(age);
 
 
-//functions
+
+//FUNCTIONS
 
 function logger(){
     console.log("I have faith in what am doing");
@@ -49,7 +53,11 @@ function toUpper(text){
 toUpper(ojuu);
 toUpper(mine);
 
-//string concatenation
+
+
+
+
+//STRING CONCATENATION
 
 console.log("Hello am the" + " Owner");
 console.log("Hola una nina, it's me");
@@ -62,7 +70,11 @@ console.log(`My name is ${ojuu} and my age is ${age}`);
 
 console.log(typeof age)
 
-// if else statements
+
+
+
+
+// IF ELSE STATEMENT
 
 const yourage = 18;
 
@@ -100,11 +112,100 @@ else{
     console.log("You are just another loser")
 }
 
-// Arrays
+
+
+
+
+// ARRAYS
+
+
 // this are variables that you can store multiple values inside them
 
 let booms = ['sports', 'cooking', 'Reading', 'playing games', 'Praying'];
 console.log(booms);
-// to add values to an array
 
+//accessing arrays
+console.log(booms[1]);
+
+// to add values to an array
+booms.push('Just added A NEW STUFF');
+console.log(booms);
+
+//To delete a value in a array
+
+booms.pop();
+console.log(booms);
+//to remove the first thing in ana array
+booms.shift();
+console.log(booms);
+//to add at the beginning
+booms.unshift("Hola to the world");
+console.log(booms);
+//to find the index of something in a array
+
+console.log(booms.indexOf("playing games"));
+
+
+
+
+//OBJECTS AND KEYWORD THIS
+
+//lets create an object
+const user={
+    name: 'Mike', //this is a property
+    age: 24,
+    married: false,
+    purchases: ['Laptop', 'house', 'monitor'],
+
+    sayName: function(){
+        console.log(this.name); //this is just like a function
+    }
+};
+
+user.sayName();
+
+//accessing different properties inside the user
+console.log(user.purchases);
+
+
+
+
+
+//FOR LOOPS AND WHILE LOOPS
+
+//FOR LOOP
+
+let mike = ['cars', 'computers', 'lawless', 'old fasion', 'vinatage', 'wiredo'];
+
+for(i of mike){
+    console.log(i);
+    if(i === 'lawless'){
+        console.log("Learn the rules you want to break");
+    }
+}
+
+console.log("GOOODD MORNINGGGG");
+//to stop the loop after we have found lawless
+for(i of mike){
+    console.log(i);
+    if(i === 'lawless'){
+        console.log("Learn the rules you want to break");
+        break;
+    }
+}
+
+//WHILE LOOP
+
+let loading = 0;
+
+while(loading < 5){
+    console.log('You are still pretty young');
+    loading +=1;
+}
+
+
+
+
+
+//DOM MANIPULATION
 
